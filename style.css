@@ -1,0 +1,52 @@
+
+
+
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    border-width: 100px;
+    border-color:dashed;
+}
+id1 {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 10px ;
+    padding: 5px;
+}
+body {
+    background-color:grey;
+
+}
+h4 {
+    font-family: 'Arial', sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+}
+form {
+    color:#ffffff;
+}
+h2{
+    font-family: 'Arial', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+aside 
+{
+    font-family: 'Arial', sans-serif;
+    text-align: right;
+}
+button {
+    font-size: 20px;
+    color: #000000;
+    background-color: #ffffff;
+    
+ 
+    border:10px;
+    
+}

@@ -1,6 +1,30 @@
-function handleFormSubmit(event) {
-    // 1. STOP the page from reloading
-    event.preventDefault(); 
+
+  var form = document.getElementById("my-form"); // Make sure your <form> has id="my-form"
+
+async function handleFormSubmit(event) {
+    event.preventDefault(); // Stop the page from reloading
+
+    var status = document.getElementById("my-form-status"); // An empty <div> to show messages
+    var data = new FormData(event.target);
+
+    // This is where the Formspree URL goes in JavaScript
+    fetch("https://formspree.io/f/projects", {
+        method: "POST",
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            alert("Success! Message sent."); // Show success
+            form.reset(); // Clear the form
+        } else {
+            alert("Oops! There was a problem.");
+        }
+    });
+}
+
+form.addEventListener("submit", handleFormSubmit);
 
     // 2. GET the data from the HTML
     var nameValue = document.getElementById("name").value;
@@ -60,4 +84,5 @@ window.onload = function() {
 
         alert("Welcome back, " + user.name + "! I restored your data.");
     }
+
 };
